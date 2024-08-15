@@ -1,5 +1,5 @@
 
-class ValidarDadosGeneric(ExceptionGroup):
+class ValidarDadosGeneric(Exception):
     """
     Exceção para dados inválidos.
 
@@ -15,5 +15,4 @@ class ValidarDadosGeneric(ExceptionGroup):
         __init__(self, message):
         Inicializa a exceção com a mensagem de erro fornecida.
     """
-    def __init__(self, message) -> None:
-        super().__init__(message)
+    pass
