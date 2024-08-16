@@ -245,7 +245,12 @@ def main():
         elif opcao == '6':
             exportar_relatorio()
         elif opcao == '7':
-            agrupamento_por_mes()
+            resultado = agrupar_por_mes(registros)
+            if resultado:
+                for mes, total in resultado.items():
+                    print(f"Total de {mes}: R${total}")
+            else:
+                print("Nenhum registro encontrado para o mês especificado.")
         elif opcao == '0':
             print("Saindo do programa...")
             break
