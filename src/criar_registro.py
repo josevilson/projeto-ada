@@ -1,12 +1,17 @@
 from utilitarios.calcular_tempo import tempo
-from utilitarios.entrada_data import validar_data
-from utilitarios.validar_generic import ValidarDadosGeneric
+from utilitarios.entrada_data import validar_data #?
+from utilitarios.validar_generic import ValidarDadosGeneric #?
+from datetime import datetime
 
-
-def criar_registro(): #separar dia, mes e ano
+def criar_registro():
     """Cria um novo registro financeiro com interação do usuário."""
-
-    data = validar_data()
+    while True:
+        data = input('Digite a data da movimentação (dd/mm/aaaa): ')
+        try:
+            data = datetime.strptime(data, '%d/%m/%Y')
+            break
+        except ValueError:
+            print('Erro, digite a data de acordo com o exemplo: 01/01/2000')
     while True:
         tipo = input("Digite o tipo de movimentação (Receita, Despesa ou Investimento): ").capitalize()
         if tipo in ['Receita','Despesa','Investimento']:
@@ -25,22 +30,16 @@ def criar_registro(): #separar dia, mes e ano
     rendimento = None
 
     if tipo == 'Investimento':
-        while True:
-            juros = input('Digite o percentual mensal de juros do investimento:')
-            try:
-                juros = float(juros)
-                break
-            except ValueError:
-                print('Erro, digite apenas números')
-
-        montante_inicial = valor * (1+((juros)/100))**(tempo(data))
+        montante_inicial = valor * (1+0.0005)**(tempo(data))
         montante = round(montante_inicial, 2)
         rendimento_inicial = montante - valor
         rendimento = round(rendimento_inicial, 2)
 
     registro = {
-        'id': 0,
-        'data': data,
+        'data': { 'data': data, 
+                 'dia': f'{data.day:02}',
+                 'mês': f'{data.month:02}',
+                 'ano':f'{data.year:02}'}
         'tipo': tipo,
         'valor': valor if tipo != 'Despesa' else -valor, 
         'montante': montante,
