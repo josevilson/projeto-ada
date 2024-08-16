@@ -1,6 +1,7 @@
 from utilitarios.validar_generic import ValidarDadosGeneric
 
-def validar_intx(valor_inteiro: str, numero_range: list[int]) -> int:
+
+def input_int() -> int:
     """
     Valida uma string de data no formato 'DD/MM/AAAA'.
 

@@ -1,0 +1,18 @@
+[
+    {
+        "id": 0,
+        "data": "01/01/2024",
+        "tipo": "Despesa",
+        "valor": -999.0,
+        "montante": null,
+        "rendimento": null
+    },
+    {
+        "id": 0,
+        "data": "18/03/2024",
+        "tipo": "Investimento",
+        "valor": 777.0,
+        "montante": 172.94,
+        "rendimento": 13.465791077258416
+    }
+]
