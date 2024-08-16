@@ -1,7 +1,7 @@
 from utilitarios.validar_generic import ValidarDadosGeneric
 
 
-def input_int() -> int:
+def input_int(numero_range) -> int:
     """
     Valida uma string de data no formato 'DD/MM/AAAA'.
 
@@ -14,12 +14,12 @@ def input_int() -> int:
     Raises:
         ValidarDadosGeneric: Se a data não estiver no formato correto ou for inválida.
     """
-    try:
-        valor_inteiro = int(valor_inteiro)
-        if valor_inteiro in range(numero_range):
-            return valor_inteiro
-        else:
-            raise ValidarDadosGeneric(f"numero invalido {valor_inteiro}" )
-    except ValueError:
-        raise ValidarDadosGeneric(f"numero invalido {valor_inteiro}")
+    while:
+        try:
+            valor_inteiro = int(valor_inteiro)
+            if valor_inteiro in range(numero_range):
+                return valor_inteiro
+
+        except ValueError as e:
+            print('Digite um número inteiro Válido.')
 

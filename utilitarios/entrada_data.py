@@ -23,6 +23,4 @@ def validar_data() -> datetime:
             return data_valida
 
         except ValueError as e:
-            print(e)
-            raise ValidarDadosGeneric(f"\n\n ******************************* \n Data inválida: \n Você digitou: {data_str} \n Esperando o formato DD/MM/AAAA \n Exemplo: 31/01/2024. \n******************************* \n\n")
-
+            print('Data inválida, por favor. Digite no formato esperado - Exemplo: 18/01/2024 (dd/mm/yyyy)')

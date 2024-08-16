@@ -3,7 +3,7 @@
         "id": 0,
         "data": "01/01/2024",
         "tipo": "Despesa",
-        "valor": -999.0,
+        "valor": 55555.0,
         "montante": null,
         "rendimento": null
     },
@@ -13,6 +13,30 @@
         "tipo": "Investimento",
         "valor": 777.0,
         "montante": 172.94,
-        "rendimento": 13.465791077258416
+        "rendimento": 2679.4245902153543
+    },
+    {
+        "id": 0,
+        "data": "33333",
+        "tipo": "Receita",
+        "valor": 55.0,
+        "montante": null,
+        "rendimento": null
+    },
+    {
+        "id": 0,
+        "data": "18/06/2023",
+        "tipo": "Investimento",
+        "valor": 100.0,
+        "montante": 1.0640258006612602e+48,
+        "rendimento": 6696.142615145492
+    },
+    {
+        "id": 0,
+        "data": "01/01/2024",
+        "tipo": "Investimento",
+        "valor": 1000.0,
+        "montante": 9570.88,
+        "rendimento": 8570.879506226996
     }
 ]

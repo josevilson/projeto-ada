@@ -1,10 +1,12 @@
 from utilitarios.calcular_tempo import tempo
+from utilitarios.entrada_data import validar_data
+from utilitarios.validar_generic import ValidarDadosGeneric
 
 
 def criar_registro(): #separar dia, mes e ano
     """Cria um novo registro financeiro com interação do usuário."""
 
-    data = input("Data (dd/mm/aaaa): ")
+    data = validar_data()
     while True:
         tipo = input("Digite o tipo de movimentação (Receita, Despesa ou Investimento): ").capitalize()
         if tipo in ['Receita','Despesa','Investimento']:
