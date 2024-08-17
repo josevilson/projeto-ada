@@ -1,3 +1,5 @@
+import csv
+import json
 def exportar_relatorio(registros, arquivo, formato='csv'):
     """Exporta um relatório dos registros financeiros."""
 
