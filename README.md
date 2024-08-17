@@ -76,3 +76,12 @@ Os arquivos dentro da pasta `utilitarios/` contêm funções auxiliares utilizad
 
    ```bash
    git clone https://github.com/seu_usuario/nome_do_repositorio.git
+
+2. Navegue até a pasta do projeto:
+
+   ```bash
+   cd nome_do_projeto
+
+1. Execute o arquivo Python para iniciar o sistema de controle financeiro:
+  ```bash
+  python main.py
