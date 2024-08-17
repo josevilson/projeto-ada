@@ -27,6 +27,7 @@ def menu():
 
         if opcao == '1':
             novo_registro = criar_registro()
+            
             registros.append(novo_registro)
             salvar_registros(registros, arquivo)
             print("Registro criado com sucesso!")
@@ -50,9 +51,11 @@ def menu():
             formato = input("Formato do relatório (csv ou json): ")
             exportar_relatorio(registros, 'relatorio.' + formato, formato)
         elif opcao == '7':
-            resultado = agrupar_por_mes(registros)
-            for mes, total in resultado.items():
-                print(f"{mes}: {total}")
+            resultado = agrupar_por_mes(registros) 
+            print(resultado)
+            if resultado:
+                for mes, total in resultado.items():
+                    print(f"{mes}: {total}")
         elif opcao == '0':
             break
         else:

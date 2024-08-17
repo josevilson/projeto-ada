@@ -1,4 +1,4 @@
-from utilitarios.validar_data import validar_data
+
 from utilitarios.validar_generic import ValidarDadosGeneric
 
 

@@ -20,7 +20,7 @@ def agrupar_por_mes(registros):
             else:
                 resultado[mes] = float(registro['valor'])
 
-    if not resultado:
-        return print(f'Nenhum registro encontrado para {mes_desejado}.')
-    else:
-        return resultado
+        if not resultado:
+            return print(f'Nenhum registro encontrado para {mes_desejado}.')
+        else:
+            return resultado

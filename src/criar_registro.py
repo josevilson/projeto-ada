@@ -6,7 +6,7 @@ from utilitarios.validar_generic import ValidarDadosGeneric
 def criar_registro(): #separar dia, mes e ano
     """Cria um novo registro financeiro com interação do usuário."""
 
-    data = validar_data()
+    data = input('data')
     while True:
         tipo = input("Digite o tipo de movimentação (Receita, Despesa ou Investimento): ").capitalize()
         if tipo in ['Receita','Despesa','Investimento']:
