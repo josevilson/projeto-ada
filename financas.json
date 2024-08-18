@@ -2,14 +2,79 @@
     {
         "id": 0,
         "data": {
-            "data_completa": "18/02/2025",
+            "data_completa": "01/01/2023",
+            "dia": "01",
+            "mes": "01",
+            "ano": "2023"
+        },
+        "tipo": "Investimento",
+        "valor": 995.0,
+        "montante": 370715.28,
+        "rendimento": 369720.28
+    },
+    {
+        "id": 0,
+        "data": {
+            "data_completa": "01/01/2024",
+            "dia": "01",
+            "mes": "01",
+            "ano": "2024"
+        },
+        "tipo": "Investimento",
+        "valor": 90.0,
+        "montante": 887.48,
+        "rendimento": 797.48
+    },
+    {
+        "id": 0,
+        "data": {
+            "data_completa": "05/05/2023",
+            "dia": "05",
+            "mes": "05",
+            "ano": "2023"
+        },
+        "tipo": "Investimento",
+        "valor": 10.0,
+        "montante": 1084.84,
+        "rendimento": 1074.84
+    },
+    {
+        "id": 0,
+        "data": {
+            "data_completa": "01/01/2024",
+            "dia": "01",
+            "mes": "01",
+            "ano": "2024"
+        },
+        "tipo": "Investimento",
+        "valor": 1000.0,
+        "montante": 9860.89,
+        "rendimento": 8860.89
+    },
+    {
+        "id": 0,
+        "data": {
+            "data_completa": "18/06/2024",
             "dia": "18",
-            "mes": "02",
-            "ano": "2025"
+            "mes": "06",
+            "ano": "2024"
         },
         "tipo": "Investimento",
         "valor": 99.0,
-        "montante": 15.87,
-        "rendimento": -83.13
+        "montante": 181.65,
+        "rendimento": 82.65
+    },
+    {
+        "id": 0,
+        "data": {
+            "data_completa": "02/01/2024",
+            "dia": "02",
+            "mes": "01",
+            "ano": "2024"
+        },
+        "tipo": "Investimento",
+        "valor": 500.0,
+        "montante": 4881.63,
+        "rendimento": 4381.63
     }
 ]

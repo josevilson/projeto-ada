@@ -39,7 +39,6 @@ Este projeto é um sistema de controle financeiro que recebe movimentações fin
 ├── utilitarios/
 │   ├── calcular_tempo.py
 │   ├── entrada_data.py
-│   ├── solicitar_input.py
 │   ├── validar_generic.py
 │   ├── validar_int.py
 ├── financas.json

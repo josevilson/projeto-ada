@@ -8,9 +8,11 @@ def atualiza_rendimento(registros): #necessário algumas mudanças
 
     for registro in registros:
         if registro['tipo'] == 'Investimento':
-            data_investimento = datetime.strptime(registro['data'], '%d/%m/%Y')
+            data_investimento = datetime.strptime(registro['data']['data_completa'], '%d/%m/%Y')
             dias = (hoje - data_investimento).days
-            montante = float(registro['valor'])
+            capital = float(registro['valor'])
             taxa_juros = 0.01  # o juros deve ser solicitado ao usuário
-            rendimento = montante * (1 + taxa_juros) ** dias - montante
-            registro['rendimento'] = rendimento
+            rendimento = capital * (1 + taxa_juros) ** dias - capital
+            montante = capital * (1 + taxa_juros) ** dias
+            registro['rendimento'] = round(rendimento, 2)
+            registro['montante'] = round(montante, 2)
