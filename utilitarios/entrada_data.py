@@ -3,7 +3,7 @@ from datetime import datetime
 from utilitarios.validar_generic import ValidarDadosGeneric
 
 
-def validar_data() -> dict:
+def validar_data(msg: str) -> dict:
     """
     Valida uma string de data no formato 'DD/MM/AAAA' e retorna um dicionário com dia, mês, ano e a data completa como strings.
 
@@ -15,7 +15,7 @@ def validar_data() -> dict:
     """
     while True:
         try:
-            data_str = input('Digite uma data no formato válido (DD/MM/AAAA): ')
+            data_str = input(f"{msg} \n")
             data_valida = datetime.strptime(data_str, '%d/%m/%Y')
             
             dia = str(data_valida.day).zfill(2)
