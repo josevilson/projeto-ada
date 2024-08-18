@@ -15,9 +15,12 @@ def validar_data(msg: str) -> dict:
     """
     while True:
         try:
-            data_str = input(f"{msg} \n")
+            data_str = input(f"{msg}: ")
 
             data_valida = datetime.strptime(data_str, '%d/%m/%Y')
+            if data_valida > datetime.now():
+                print('Data não pode ser superior à data de hoje.')
+                continue
             
             dia = str(data_valida.day).zfill(2)
             mes = str(data_valida.month).zfill(2)

@@ -1,5 +1,9 @@
+from datetime import datetime
+
 from src.atualizar_rendimento import atualiza_rendimento
+from utilitarios.calcular_tempo import tempo
 from utilitarios.entrada_data import validar_data
+from utilitarios.validacao import validar_tipo, validar_valor
 
 
 def atualizar_registro(registros: list[dict]) -> None:
@@ -29,9 +33,9 @@ def atualizar_registro(registros: list[dict]) -> None:
     indice = int(input("Índice do registro a ser atualizado: "))
 
     if 0 <= indice <= len(registros):
-        novo_valor = input("Novo valor (deixe em branco para manter o atual): ")
-        novo_tipo = input("Novo tipo (deixe em branco para manter o atual): ")
-        nova_data = validar_data('Nova data (deixe em branco para manter o atual): ', vazio='a')
+        novo_valor = validar_valor()
+        novo_tipo = validar_tipo('Digite o tipo que deseja alterar. [Receita, Despesa, Investimento]: ')
+        nova_data = validar_data('Nova data (deixe em branco para manter o atual): ')
 
         if novo_valor:
             registros[indice]['valor'] = float(novo_valor) if novo_tipo != 'Despesa' else -float(novo_valor)
@@ -39,6 +43,16 @@ def atualizar_registro(registros: list[dict]) -> None:
             registros[indice]['tipo'] = novo_tipo #caso seja Investimento tem que pedir o juros
         if nova_data:
             registros[indice]['data'] = nova_data
+        registros[indice]['data_atualizacao'] = datetime.now().strftime("%d/%m/%Y")
+
+        if novo_tipo == 'Investimento':
+
+            juros = 0.01
+
+            montante_inicial = novo_valor * (1+((juros)))**(tempo(registros[indice]['data']['data_completa']))
+            montante = round(montante_inicial, 2)
+            rendimento_inicial = montante - novo_valor
+            rendimento = round(rendimento_inicial, 2)
 
         atualiza_rendimento(registros)
     else:

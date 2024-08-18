@@ -2,61 +2,29 @@
     {
         "id": 0,
         "data": {
-            "data_completa": "01/01/2024",
+            "data_completa": "01/08/2024",
             "dia": "01",
-            "mes": "01",
+            "mes": "08",
             "ano": "2024"
         },
-        "tipo": "despesa",
-        "valor": 1000.0,
-        "montante": 9851.03,
-        "rendimento": 8852.03
+        "tipo": "Investimento",
+        "valor": 50.0,
+        "montante": 59.22,
+        "rendimento": 9.22,
+        "data_atualizacao": "18/08/2024"
     },
     {
         "id": 0,
         "data": {
-            "data_completa": "19/01/2024",
-            "dia": "19",
-            "mes": "01",
+            "data_completa": "01/02/2024",
+            "dia": "01",
+            "mes": "02",
             "ano": "2024"
         },
-        "tipo": "Receita",
-        "valor": 55.0,
-        "montante": null,
-        "rendimento": null
-    },
-    {
-        "id": 0,
-        "data": null,
-        "tipo": "Receita",
-        "valor": 55.0,
-        "montante": null,
-        "rendimento": null
-    },
-    {
-        "id": 0,
-        "data": {
-            "data_completa": "18/01/2024",
-            "dia": "18",
-            "mes": "01",
-            "ano": "2024"
-        },
-        "tipo": "Receita",
-        "valor": -1.0,
-        "montante": null,
-        "rendimento": null
-    },
-    {
-        "id": 0,
-        "data": {
-            "data_completa": "18/01/2024",
-            "dia": "18",
-            "mes": "01",
-            "ano": "2024"
-        },
-        "tipo": "Receita",
-        "valor": 1.2,
-        "montante": null,
-        "rendimento": null
+        "tipo": "Investimento",
+        "valor": 9973.0,
+        "montante": 72240.24,
+        "rendimento": 62267.24,
+        "data_atualizacao": null
     }
 ]

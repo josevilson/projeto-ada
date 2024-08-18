@@ -31,3 +31,4 @@ def atualiza_rendimento(registros: list[dict]) -> None: #necessário algumas mud
             montante = capital * (1 + taxa_juros) ** dias
             registro['rendimento'] = round(rendimento, 2)
             registro['montante'] = round(montante, 2)
+            registro['data_atualizacao'] = datetime.now().strftime("%d/%m/%Y")
