@@ -1,26 +1,15 @@
 [
     {
         "id": 0,
-        "data": "18/06/1995",
-        "tipo": "Despesa",
-        "valor": -999999.0,
-        "montante": null,
-        "rendimento": null
-    },
-    {
-        "id": 0,
-        "data": "18/06/1995",
-        "tipo": "Receita",
-        "valor": 100000.0,
-        "montante": null,
-        "rendimento": null
-    },
-    {
-        "id": 0,
-        "data": "18/07/2024",
-        "tipo": "Receita",
-        "valor": 555555.0,
-        "montante": null,
-        "rendimento": null
+        "data": {
+            "data_completa": "18/02/2025",
+            "dia": "18",
+            "mes": "02",
+            "ano": "2025"
+        },
+        "tipo": "Investimento",
+        "valor": 99.0,
+        "montante": 15.87,
+        "rendimento": -83.13
     }
 ]
