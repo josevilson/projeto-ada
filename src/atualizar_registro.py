@@ -2,8 +2,22 @@ from src.atualizar_rendimento import atualiza_rendimento
 from utilitarios.entrada_data import validar_data
 
 
-def atualizar_registro(registros):
-    """Atualiza um registro financeiro existente com interação do usuário."""
+def atualizar_registro(registros: list[dict]) -> None:
+    '''Atualiza um registro já existente conforme solicitação do usuário.
+    
+            O usuário pode selecionar um registro financeiro de uma lista e atualizar seus valores.
+            Também pode optar em alterar o valor já existente, o tipo e a data.
+            Se o usuário deixar algum valor em branco, o valor atual do registro será mantido.
+         
+        Args:
+            registros (list[dict]): 
+                Recebe uma lista de dicionários onde cada dicionário representa um registro financeiro 
+                com as chaves 'valor', 'tipo', e 'data'.
+
+        Returns:
+            None: 
+                Não retorna nenhum valor, apenas atualiza o registro. 
+    '''
 
     if not registros:
         print("Nenhum registro encontrado.")

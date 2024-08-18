@@ -1,8 +1,23 @@
 import csv
 import json
-def exportar_relatorio(registros, arquivo, formato='csv'):
-    """Exporta um relatório dos registros financeiros."""
 
+
+def exportar_relatorio(registros: list[dict], arquivo: str, formato: str = 'csv') -> None:
+
+    '''Exporta o relatório dos registros financeiros para um arquivo nos formatos CSV ou JSON.
+    
+         Args:
+            registros (list[dict]): 
+                Recebe uma lista de dicionários onde cada dicionário representa um registro.
+            arquivo (str): 
+                Nome do arquivo de saída para o relatório.
+            formato (str): 
+                Formato do arquivo de saída, que pode ser 'csv' ou 'json'.
+                
+        Returns:
+            None: 
+                Não retorna nenhum valor, apenas vai exportar os registros para o arquivo especificado.
+    '''
     if formato == 'csv':
         try:
             with open(arquivo, 'w', newline='', encoding='utf-8') as f:

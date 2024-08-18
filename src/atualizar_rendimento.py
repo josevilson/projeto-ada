@@ -1,8 +1,23 @@
 from datetime import datetime
+from typing import Union
 
 
-def atualiza_rendimento(registros): #necessário algumas mudanças
-    """Atualiza o rendimento dos investimentos."""
+def atualiza_rendimento(registros: list[dict]) -> None: #necessário algumas mudanças
+    '''Atualiza o rendimento dos investimentos informados pelo usuário.
+    
+            A função calcula cada registro de 'investimento' com base na data da aplicação e na taxa juros informada pelo usuário.
+            O rendimento será adicionado ao registro 'rendimento'.
+    
+        Args:
+            registros (list[dict]): lista de dicionários que recebe str e float
+                Cada dicionário representa um registro financeiro. 
+                Cada registro contém as chaves 'valor' (valor do investimento), 'tipo' (tipo do registro),
+                e 'data' (data do investimento).
+            
+         Returns:
+            None: 
+                Não retorna nenhum valor, apenas atualiza o registro.
+    '''
 
     hoje = datetime.now()
 
