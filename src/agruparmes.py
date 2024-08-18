@@ -1,5 +1,8 @@
 from datetime import datetime
 
+from utilitarios.validacao import validar_tipo
+
+
 def agrupar_por(registros):
     """Agrupa os registros por mês e calcula o total de cada mês e tipo"""
     tipo_desejado = validar_tipo()
@@ -17,7 +20,7 @@ def agrupar_por(registros):
     nenhum_registro = True
 
     for registro in registros:
-        mes = datetime.strptime(registro['data']['data'], '%d/%m/%Y').strftime('%m/%Y')
+        mes = datetime.strptime(registro['data']['data_completa'], '%d/%m/%Y').strftime('%m/%Y')
         if mes == mes_desejado and registro['tipo'] == tipo_desejado:
             nenhum_registro = False
             if tipo_desejado == 'Investimento':

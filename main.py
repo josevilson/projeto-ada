@@ -1,6 +1,6 @@
 import csv
 
-from src import (agrupar_por_mes, atualiza_rendimento, atualizar_registro,
+from src import (agrupar_por, atualiza_rendimento, atualizar_registro,
                  criar_registro, deletar_registro, exportar_relatorio,
                  ler_registros, salvar_registros)
 from utilitarios.validar_generic import ValidarDadosGeneric
@@ -51,11 +51,7 @@ def menu():
             formato = input("Formato do relatório (csv ou json): ")
             exportar_relatorio(registros, 'relatorio.' + formato, formato)
         elif opcao == '7':
-            resultado = agrupar_por_mes(registros) 
-            print(resultado)
-            if resultado:
-                for mes, total in resultado.items():
-                    print(f"{mes}: {total}")
+            resultado = agrupar_por(registros)
         elif opcao == '0':
             break
         else:

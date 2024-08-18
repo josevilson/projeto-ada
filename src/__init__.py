@@ -1,4 +1,4 @@
-from src.agruparmes import agrupar_por_mes
+from src.agruparmes import agrupar_por
 from src.atualizar_registro import atualizar_registro
 from src.atualizar_rendimento import atualiza_rendimento
 from src.criar_registro import criar_registro

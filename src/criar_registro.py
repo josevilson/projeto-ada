@@ -33,7 +33,7 @@ def criar_registro(): #separar dia, mes e ano
             except ValueError:
                 print('Erro, digite apenas números')
 
-        montante_inicial = valor * (1+((juros)/100))**(tempo(data))
+        montante_inicial = valor * (1+((juros)/100))**(tempo(data['data_completa']))
         montante = round(montante_inicial, 2)
         rendimento_inicial = montante - valor
         rendimento = round(rendimento_inicial, 2)
