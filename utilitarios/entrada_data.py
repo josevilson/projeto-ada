@@ -16,6 +16,7 @@ def validar_data(msg: str) -> dict:
     while True:
         try:
             data_str = input(f"{msg} \n")
+
             data_valida = datetime.strptime(data_str, '%d/%m/%Y')
             
             dia = str(data_valida.day).zfill(2)

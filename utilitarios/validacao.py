@@ -1,11 +1,13 @@
 def validar_valor():
     while True:
-        valor = input("Digite o valor: ")
-        try:
+        valor = input("Digite o valor: ").replace(',', '.')
+        try: 
             valor = float(valor)
+            if valor < 0:
+                raise ValueError('Digite apenas valores numericos e positivos')
             return valor
         except ValueError:
-            print('Digite apenas valores numericos')
+            print('Digite apenas valores numericos e positivos')
 
 def validar_tipo():
     while True:
