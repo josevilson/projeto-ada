@@ -45,11 +45,10 @@ def validar_indice(registros: list[dict]) -> int:
     '''
     while True:
         try:
-            indice = input('digite o indice do registro que deseja excluir: ')
-            indice = int(indice)
+            indice = int(input('digite o indice do registro que deseja excluir: '))
             if 0 <= indice < len(registros):
                 return indice
             else:
-                print(f'O índice deve estar entre 0 e {len(registros) - 1}')
+                print(f'Digite índices de 0 a {len(registros) - 1}')
         except ValueError:
             print('Digite apenas números inteiros')
