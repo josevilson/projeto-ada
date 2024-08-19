@@ -18,11 +18,13 @@ def ler_registros(arquivo: str) -> list[dict]:
         list[Dict]: 
             Retorna uma lista de dicionários com os registros financeiros.
      '''
+    
     try:
         with open(arquivo, 'r') as f:
             registros = json.load(f)
     except FileNotFoundError:
         print('Ainda não há nenhum registro')
         registros = []  # Cria uma lista vazia se o arquivo não existir
+
 
     return registros

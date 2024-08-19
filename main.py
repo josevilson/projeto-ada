@@ -2,7 +2,7 @@ import csv
 
 from src import (agrupar_por, atualiza_rendimento, atualizar_registro,
                  criar_registro, deletar_registro, exportar_relatorio,
-                 ler_registros, salvar_registros)
+                 ler_registros, ler_registros_por, salvar_registros)
 from utilitarios.validar_generic import ValidarDadosGeneric
 
 
@@ -32,8 +32,9 @@ def menu():
             salvar_registros(registros, arquivo)
             print("Registro criado com sucesso!")
         elif opcao == '2':
-            if registros:
-                for registro in registros:
+            registros_filtrados = ler_registros_por.ler_registros_por(registros)
+            if registros_filtrados:
+                for registro in registros_filtrados:
                     print(registro)
             else:
                 print("Nenhum registro encontrado.")
