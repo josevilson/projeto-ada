@@ -32,3 +32,6 @@ def atualiza_rendimento(registros: list[dict]) -> None: #necessário algumas mud
             registro['rendimento'] = round(rendimento, 2)
             registro['montante'] = round(montante, 2)
             registro['data_atualizacao'] = datetime.now().strftime("%d/%m/%Y")
+        else:
+            registro['rendimento'] = None
+            registro['montante'] = None

@@ -2,29 +2,43 @@
     {
         "id": 0,
         "data": {
-            "data_completa": "01/08/2024",
-            "dia": "01",
-            "mes": "08",
-            "ano": "2024"
+            "data_completa": "12/01/2021",
+            "dia": "12",
+            "mes": "01",
+            "ano": "2021"
         },
-        "tipo": "Investimento",
-        "valor": 50.0,
-        "montante": 59.22,
-        "rendimento": 9.22,
-        "data_atualizacao": "18/08/2024"
+        "tipo": "Receita",
+        "valor": 2500.0,
+        "montante": null,
+        "rendimento": null,
+        "data_atualizacao": "19/08/2024"
     },
     {
         "id": 0,
         "data": {
-            "data_completa": "01/02/2024",
+            "data_completa": "01/01/2021",
             "dia": "01",
-            "mes": "02",
-            "ano": "2024"
+            "mes": "01",
+            "ano": "2021"
         },
-        "tipo": "Investimento",
-        "valor": 9973.0,
-        "montante": 72240.24,
-        "rendimento": 62267.24,
+        "tipo": "Despesa",
+        "valor": -250.0,
+        "montante": null,
+        "rendimento": null,
+        "data_atualizacao": null
+    },
+    {
+        "id": 0,
+        "data": {
+            "data_completa": "01/01/2021",
+            "dia": "01",
+            "mes": "01",
+            "ano": "2021"
+        },
+        "tipo": "Despesa",
+        "valor": -443.0,
+        "montante": null,
+        "rendimento": null,
         "data_atualizacao": null
     }
 ]

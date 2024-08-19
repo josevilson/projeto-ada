@@ -1,4 +1,4 @@
-id,data,tipo,valor,montante,rendimento
-0,18/06/1995,Despesa,-999999.0,,
-0,18/06/1995,Receita,100000.0,,
-0,18/07/2024,Receita,555555.0,,
+id,data,tipo,valor,montante,rendimento,data_atualizacao
+0,"{'data_completa': '13/01/2021', 'dia': '13', 'mes': '01', 'ano': '2021'}",Receita,2500.0,,,
+0,"{'data_completa': '01/01/2021', 'dia': '01', 'mes': '01', 'ano': '2021'}",Despesa,-250.0,,,
+0,"{'data_completa': '01/01/2021', 'dia': '01', 'mes': '01', 'ano': '2021'}",Despesa,-443.0,,,
