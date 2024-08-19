@@ -29,30 +29,27 @@ def atualizar_registro(registros: list[dict]) -> None:
 
     for i, registro in enumerate(registros):
         print(f"{i}: {registro}")
+    
+    indice = validar_indice(registros)
+    novo_valor = validar_valor()
+    novo_tipo = validar_tipo('Digite o tipo que deseja alterar. [Receita, Despesa, Investimento]: ')
+    nova_data = validar_data('Nova data: ')
 
-    indice = int(input("Índice do registro a ser atualizado: "))
+    if novo_valor:
+        registros[indice]['valor'] = float(novo_valor) if novo_tipo != 'Despesa' else -float(novo_valor)
+    if novo_tipo:
+        registros[indice]['tipo'] = novo_tipo
+    if nova_data:
+        registros[indice]['data'] = nova_data
+    registros[indice]['data_atualizacao'] = datetime.now().strftime("%d/%m/%Y")
 
-    if 0 <= indice <= len(registros):
-        novo_valor = validar_valor()
-        novo_tipo = validar_tipo('Digite o tipo que deseja alterar. [Receita, Despesa, Investimento]: ')
-        nova_data = validar_data('Nova data: ')
+    if novo_tipo == 'Investimento':
 
-        if novo_valor:
-            registros[indice]['valor'] = float(novo_valor) if novo_tipo != 'Despesa' else -float(novo_valor)
-        if novo_tipo:
-            registros[indice]['tipo'] = novo_tipo #caso seja Investimento tem que pedir o juros
-        if nova_data:
-            registros[indice]['data'] = nova_data
-        registros[indice]['data_atualizacao'] = datetime.now().strftime("%d/%m/%Y")
-
-        if novo_tipo == 'Investimento':
-
-            juros = 0.01
-
-            montante_inicial = novo_valor * (1+((juros)))**(tempo(registros[indice]['data']['data_completa']))
-            montante = round(montante_inicial, 2)
-            rendimento_inicial = montante - novo_valor
-            rendimento = round(rendimento_inicial, 2)
+        juros = 0.01
+        montante_inicial = novo_valor * (1+((juros)))**(tempo(registros[indice]['data']['data_completa']))
+        montante = round(montante_inicial, 2)
+        rendimento_inicial = montante - novo_valor
+        rendimento = round(rendimento_inicial, 2)
 
         atualiza_rendimento(registros)
     else:
