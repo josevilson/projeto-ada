@@ -1,4 +1,4 @@
-def validar_valor() -> float:
+def validar_valor(msg: str = "Digite o valor: ") -> float:
     '''
     Valida a entrada de um valor numérico inserida pelo usuário.
     
@@ -7,7 +7,7 @@ def validar_valor() -> float:
             Retorna o valor validado.
     '''
     while True:
-        valor = input("Digite o valor: ").replace(',', '.')
+        valor = input(msg).replace(',', '.')
         try: 
             valor = float(valor)
             if valor < 0:
