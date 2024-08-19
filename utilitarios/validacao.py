@@ -45,7 +45,7 @@ def validar_indice(registros: list[dict]) -> int:
     '''
     while True:
         try:
-            indice = int(input('digite o indice do registro que deseja excluir: '))
+            indice = int(input('digite o indice: '))
             if 0 <= indice < len(registros):
                 return indice
             else:
