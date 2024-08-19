@@ -36,7 +36,7 @@ def criar_registro() -> dict:
         rendimento = round(rendimento_inicial, 2)
 
     registro = {
-        'id': 0,
+        
         'data': data,
         'tipo': tipo,
         'valor': valor if tipo != 'Despesa' else -valor, 

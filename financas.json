@@ -1,44 +1,28 @@
 [
     {
-        "id": 0,
         "data": {
-            "data_completa": "12/01/2021",
-            "dia": "12",
-            "mes": "01",
-            "ano": "2021"
+            "data_completa": "02/05/2024",
+            "dia": "02",
+            "mes": "05",
+            "ano": "2024"
         },
         "tipo": "Receita",
-        "valor": 2500.0,
+        "valor": 1000.0,
         "montante": null,
         "rendimento": null,
         "data_atualizacao": "19/08/2024"
     },
     {
-        "id": 0,
         "data": {
-            "data_completa": "01/01/2021",
+            "data_completa": "01/05/2024",
             "dia": "01",
-            "mes": "01",
-            "ano": "2021"
+            "mes": "05",
+            "ano": "2024"
         },
-        "tipo": "Despesa",
-        "valor": -250.0,
+        "tipo": "Receita",
+        "valor": 55.0,
         "montante": null,
         "rendimento": null,
         "data_atualizacao": null
-    },
-    {
-        "id": 0,
-        "data": {
-            "data_completa": "01/01/2021",
-            "dia": "01",
-            "mes": "01",
-            "ano": "2021"
-        },
-        "tipo": "Despesa",
-        "valor": -400.0,
-        "montante": null,
-        "rendimento": null,
-        "data_atualizacao": "19/08/2024"
     }
 ]
