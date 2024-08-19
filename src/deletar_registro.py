@@ -1,3 +1,4 @@
+from utilitarios.validacao import validar_indice
 def deletar_registro(registros: list[dict])-> None:
     
     '''Deleta um registro financeiro, se solicitado pelo usuário.
@@ -21,9 +22,6 @@ def deletar_registro(registros: list[dict])-> None:
     for i, registro in enumerate(registros):
         print(f"{i}: {registro}")
 
-    indice = int(input("Índice do registro a ser deletado: "))
-
-    if 0 <= indice <= len(registros):
-        del registros[indice]
-    else:
-        print("Índice inválido.")
+    indice = validar_indice(registros)
+    del registros[indice]
+    print(f'{indice} deletado com sucesso')
