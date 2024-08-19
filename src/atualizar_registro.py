@@ -50,7 +50,4 @@ def atualizar_registro(registros: list[dict]) -> None:
         montante = round(montante_inicial, 2)
         rendimento_inicial = montante - novo_valor
         rendimento = round(rendimento_inicial, 2)
-
         atualiza_rendimento(registros)
-    else:
-        print("Índice inválido.")
