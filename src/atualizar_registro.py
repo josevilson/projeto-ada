@@ -3,7 +3,7 @@ from datetime import datetime
 from src.atualizar_rendimento import atualiza_rendimento
 from utilitarios.calcular_tempo import tempo
 from utilitarios.entrada_data import validar_data
-from utilitarios.validacao import validar_tipo, validar_valor
+from utilitarios.validacao import validar_tipo, validar_valor, validar_indice
 
 
 def atualizar_registro(registros: list[dict]) -> None:
